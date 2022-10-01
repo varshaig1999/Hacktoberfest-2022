@@ -7,6 +7,8 @@ a = input("What is your name?: ")
 # Welcoming the user.
 print("\t\tWelcome to the Python Quiz " + a, "!!", "\n")
 
+#Telling the length of the Quiz
+print("\tQuiz contains 15 questions ,correct answer gives +1 point and wrong answer +0","\n")
 # Asking user to start the Quiz By Pressing any Number key.
 x = float(input("Type any number to start the quiz : "))
 
@@ -97,7 +99,10 @@ if x >= 0:
 
                 # Adding Scores after each question
                 score += 1
-
+                #Printing correct answer
+                print("Correct Answer.")
+            else:
+                print("Wrong Answer.")
             # Printing points after each Question.
             # no matter right or wrong
             print("point:"), print(score)
