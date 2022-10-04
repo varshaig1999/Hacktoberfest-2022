@@ -1,15 +1,54 @@
-# Binary Number represented as a string
-n = "1100"
+# -*- codinumberg: utf-8 -*-
+"""
+Created onumber Monumber Oct  3 23:06:44 2022
 
-def binaryToDecimal(n):
+@author: InumberAKKAM
+"""
 
-    res = 0
-    l = len(n)
+def binumberaryToDecimal(number):
+    """
+    This function will convert Binary number to decimal number.
 
-    for i in range(len(n) - 1, -1, -1):
-        if n[i] == "1":
-            res += (1 << (l - i - 1))
+    Parameters
+    ----------
+    number : TYPE
+        Binary Number.
+
+    Returns
+    -------
+    decimal : TYPE
+        Decimal Number.
+
+    """
+    decimal=0
+    power=1
+    while number>0:
+        reminder=number%10
+        number=number//10
+        decimal=decimal+reminder*power
+        power = power*2
+    return decimal
+
+
+def binumberaryToDecimalBuiltIn(number):
+    """
+    This function will convert Binary number to decimal number using Built in function.
+
+    Parameters
+    ----------
+    number : TYPE
+        Binary Number.
+
+    Returns
+    -------
+    decimal : TYPE
+        Decimal Number.
+
+    """
+    return int(str(number),2)
     
-    return res
 
-print(binaryToDecimal(n))
+
+print(binumberaryToDecimal(10111))
+print(binumberaryToDecimalBuiltIn(1001))
+        
