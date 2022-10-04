@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Error Handling With Clean Arch</string>
+    <string name="email_not_valid">That is not a valid email</string>
+</resources>
