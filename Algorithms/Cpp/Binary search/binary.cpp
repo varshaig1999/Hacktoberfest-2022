@@ -23,7 +23,7 @@ int main ()
       
     while ( st <= end)  
     {  
-        mid = ( st + end ) / 2;  
+        mid = (st + (end  - st) ) /2;
         if (arr[mid] == tgt)  
         {  
             cout << " Element is found at index " << (mid + 1);  
